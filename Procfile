@@ -1,1 +1,1 @@
-web: gunicorn medicalsupplies.wsgi
+web: gunicorn mediacalsupplies.wsgi

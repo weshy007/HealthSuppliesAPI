@@ -22,6 +22,10 @@ psycopg2 = "*"
 python-decouple = "*"
 django-heroku = "*"
 dj-database-url = "*"
+djangorestframework = "*"
+djangorestframework-jwt = "*"
+djangorestframework-simplejwt = "*"
+drf-yasg = "*"
 
 [dev-packages]
 

@@ -4,7 +4,7 @@
 ## Clone Project
 
     $ git clone git clone https://github.com/weshy007/HealthSuppliesAPI
-    $ cd DjangoGamersAPI
+    $ cd HealthSuppliesAPI
 
 #### Migrate database:
 

@@ -11,8 +11,9 @@ python-decouple = "*"
 django-heroku = "*"
 dj-database-url = "*"
 djangorestframework = "*"
-djangorestframework-simplejwt = "*"
+djangorestframework-simplejwt = "==4.8.0"
 drf-yasg = "*"
+pyjwt = "==2.1.0"
 
 [dev-packages]
 

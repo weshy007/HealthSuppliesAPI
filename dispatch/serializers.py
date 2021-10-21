@@ -4,4 +4,4 @@ from .models import Dispatch
 class DispatchSerializer(serializers.ModelSerializer):
     class Meta:
         model = Dispatch
-        fields = ['item_name', 'item_description','item_quantity','date_created','updated_at', 'status']
+        fields = ['item_name', 'item_description','item_quantity','departure','destination','date_created','updated_at', 'status']

@@ -16,6 +16,7 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
+from datetime import timedelta
 
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
@@ -72,6 +73,7 @@ INSTALLED_APPS = [
     'authentication',
     'rest_framework',
     'core',
+    'dispatch',
     'drf_yasg',
     'orders',
     'rest_framework_simplejwt',
@@ -92,6 +94,11 @@ SWAGGER_SETTINGS={
             'in':'header'
         }
     }
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(days=7),
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),
 }
 
 MIDDLEWARE = [
@@ -147,6 +154,8 @@ AUTH_PASSWORD_VALIDATORS = [
 
 
 REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10,
     'DEFAULT_AUTHENTICATION_CLASSES': (
     
         'rest_framework_simplejwt.authentication.JWTAuthentication',

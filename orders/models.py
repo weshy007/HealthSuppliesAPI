@@ -17,6 +17,7 @@ class Order(models.Model):
     item_name=models.CharField(choices=ITEM_OPTIONS,max_length=255)
     item_description=models.CharField(max_length=255,blank=True)
     item_quantity=models.CharField(max_length=255,blank=True)
+    location=models.CharField(max_length=255,blank=True)
     owner=models.ForeignKey(to=User,on_delete=models.CASCADE)
     date_created = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
